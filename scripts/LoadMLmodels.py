@@ -10,7 +10,6 @@ import os
 
 folder_path = Path(__file__).parent.parent
 
-
 # Loading Machine Learning Models to predict each variable
 
 Pn = joblib.load(folder_path.joinpath('models/CATB_Pn (kg)_model.pkl')) 
