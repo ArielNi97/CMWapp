@@ -7,15 +7,13 @@ def g(x):
     if x['Espesor (cm)'] == 10: return 68/129
     elif x['Espesor (cm)'] == 15: return 48.75/93
     elif x['Espesor (cm)'] == 20: return 42/80
-    else: return 0
-    
-folder_path = Path(__file__).parent.parent    
+    else: return 0  
 
 ## Reading Files 
 
-WallGeometry = pd.read_csv(folder_path.joinpath('Inputs/Input_Walls_geometry.csv'))
-WallMaterial = pd.read_csv(folder_path.joinpath('Inputs/Input_Walls_Material.csv'))
-WallRebars = pd.read_csv(folder_path.joinpath('Inputs/Input_Walls_rebars.csv'))
+WallGeometry = pd.read_csv('Inputs/Input_Walls_geometry.csv')
+WallMaterial = pd.read_csv('Inputs/Input_Walls_Material.csv')
+WallRebars = pd.read_csv('Inputs/Input_Walls_rebars.csv')
 
 
 ## Adding the materials for the dataset
@@ -51,4 +49,4 @@ Walls["Area_neta"] = Walls["Area gross Percentage"] * Walls["Espesor (cm)"] * Wa
 Walls["radio_giro"] = np.sqrt(Walls["Inercia"]/(Walls["Area_neta"]))
 
 Walls_sorted = Walls.iloc[:, [4,5,2,6,8,9,10,11,12,3,7,0,1]]
-Walls_sorted.to_csv(folder_path.joinpath('Inputs/InputForML.csv'), index = False)  
+Walls_sorted.to_csv('Inputs/InputForML.csv', index = False)  

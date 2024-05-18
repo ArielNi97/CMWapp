@@ -3,25 +3,22 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 import altair as alt
-from pathlib import Path
 import subprocess
 import traceback
-import joblib
 
-folder_path = Path(__file__).parent.parent
-    
+
 st.title("Walls Output")
 
 if st.button("**Run Analysis**"):
          try:
             # Replace "my_script.py" with the actual name of your script
             
-            subprocess.run(["python3", folder_path.joinpath("/scripts/BuildMLInputFile.py")], check=True)
-            subprocess.run(["python3", folder_path.joinpath("scripts/LoadMLmodels.py")], check=True)
+            subprocess.run(["python", "scripts/BuildMLInputFile.py"], check=True)
+            subprocess.run(["python", "scripts/LoadMLmodels.py"], check=True)
 
-            subprocess.run(["python3", folder_path.joinpath("/scripts/CapacitiesVsDemands.py")], check=True)
-            subprocess.run(["python3", folder_path.joinpath("/scripts/BuildOOPCalculator.py")], check=True)
-            subprocess.run(["python3", folder_path.joinpath("/scripts/OOPLimitLines.py")], check=True)
+            subprocess.run(["python", "scripts/CapacitiesVsDemands.py"], check=True)
+            subprocess.run(["python", "scripts/BuildOOPCalculator.py"], check=True)
+            subprocess.run(["python", "scripts/OOPLimitLines.py"], check=True)
             
             st.success("Analysis executed successfully!")
          
