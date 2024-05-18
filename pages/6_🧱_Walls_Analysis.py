@@ -13,12 +13,12 @@ if st.button("**Run Analysis**"):
          try:
             # Replace "my_script.py" with the actual name of your script
             
-            subprocess.run(["python", "scripts/BuildMLInputFile.py"], check=True)
-            subprocess.run(["python", "scripts/LoadMLmodels.py"], check=True)
+            subprocess.run(["python", "./scripts/BuildMLInputFile.py"], check=True)
+            subprocess.run(["python", "./scripts/LoadMLmodels.py"], check=True)
 
-            subprocess.run(["python", "scripts/CapacitiesVsDemands.py"], check=True)
-            subprocess.run(["python", "scripts/BuildOOPCalculator.py"], check=True)
-            subprocess.run(["python", "scripts/OOPLimitLines.py"], check=True)
+            subprocess.run(["python", "./scripts/CapacitiesVsDemands.py"], check=True)
+            subprocess.run(["python", "./scripts/BuildOOPCalculator.py"], check=True)
+            subprocess.run(["python", "./scripts/OOPLimitLines.py"], check=True)
             
             st.success("Analysis executed successfully!")
          
