@@ -6,6 +6,7 @@ import altair as alt
 import subprocess
 import traceback
 from scripts.BuildMLInputFile import run_build_ml_input_file
+from scripts.LoadMLmodels import run_load_ml_models
 
 st.title("Walls Output")
 
@@ -14,6 +15,7 @@ if st.button("**Run Analysis**"):
             # Replace "my_script.py" with the actual name of your script
             
             run_build_ml_input_file()
+            run_load_ml_models()
             # subprocess.run(["python", "./scripts/BuildMLInputFile.py"], check=True)
             # subprocess.run(["python", "./scripts/LoadMLmodels.py"], check=True)
             # subprocess.run(["python", "./scripts/CapacitiesVsDemands.py"], check=True)
