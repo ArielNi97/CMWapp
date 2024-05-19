@@ -8,11 +8,7 @@ from scripts.LoadMLmodels import run_load_ml_models
 from scripts.CapacitiesVsDemands import run_capacities_vs_demands
 from scripts.BuildOOPCalculator import run_BuildOOP_calculator
 from scripts.OOPLimitLines import run_OOPLimit_Lines
-from scripts.ConfinedMasonryWallsE070_OOP_f import OOPlaneStresses_E070_f
-from scripts.ConfinedMasonryWallsE070_OOP_m import *
-from scripts.ConfinedMasonryWallsE070_OOP_Ms import OOPlaneSeismicMoment_E070_Ms
-from scripts.ConfinedMasonryWallsE070_OOP_Mt import OOPlaneMoment_E070_Mt
-from scripts.ConfinedMasonryWallsE070_OOP_W import *
+
 
 
 st.title("Walls Output")

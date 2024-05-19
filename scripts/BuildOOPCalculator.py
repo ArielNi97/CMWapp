@@ -1,11 +1,11 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from ConfinedMasonryWallsE070_OOP_f import OOPlaneStresses_E070_f
-from ConfinedMasonryWallsE070_OOP_m import *
-from ConfinedMasonryWallsE070_OOP_Ms import OOPlaneSeismicMoment_E070_Ms
-from ConfinedMasonryWallsE070_OOP_Mt import OOPlaneMoment_E070_Mt
-from ConfinedMasonryWallsE070_OOP_W import *
+from scripts.ConfinedMasonryWallsE070_OOP_f import OOPlaneStresses_E070_f
+from scripts.ConfinedMasonryWallsE070_OOP_m import *
+from scripts.ConfinedMasonryWallsE070_OOP_Ms import OOPlaneSeismicMoment_E070_Ms
+from scripts.ConfinedMasonryWallsE070_OOP_Mt import OOPlaneMoment_E070_Mt
+from scripts.ConfinedMasonryWallsE070_OOP_W import *
 import sys
 
 
