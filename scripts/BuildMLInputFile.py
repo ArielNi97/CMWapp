@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from pathlib import Path
+
 
 
 def g(x):
@@ -13,9 +13,9 @@ def g(x):
 def run_build_ml_input_file():
     ## Reading Files 
 
-    WallGeometry = pd.read_csv('./Inputs/Input_Walls_geometry.csv')
-    WallMaterial = pd.read_csv('./Inputs/Input_Walls_Material.csv')
-    WallRebars = pd.read_csv('./Inputs/Input_Walls_rebars.csv')
+    WallGeometry = pd.read_csv('Inputs/Input_Walls_geometry.csv')
+    WallMaterial = pd.read_csv('Inputs/Input_Walls_Material.csv')
+    WallRebars = pd.read_csv('Inputs/Input_Walls_rebars.csv')
 
 
     ## Adding the materials for the dataset
@@ -51,7 +51,7 @@ def run_build_ml_input_file():
     Walls["radio_giro"] = np.sqrt(Walls["Inercia"]/(Walls["Area_neta"]))
 
     Walls_sorted = Walls.iloc[:, [4,5,2,6,8,9,10,11,12,3,7,0,1]]
-    Walls_sorted.to_csv('./Inputs/InputForML.csv', index = False)  
+    Walls_sorted.to_csv('Inputs/InputForML.csv', index = False)  
 
 if __name__ == "__main__":
     run_build_ml_input_file()

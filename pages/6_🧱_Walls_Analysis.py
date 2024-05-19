@@ -7,6 +7,7 @@ import subprocess
 import traceback
 from scripts.BuildMLInputFile import run_build_ml_input_file
 from scripts.LoadMLmodels import run_load_ml_models
+from scripts.CapacitiesVsDemands import run_capacities_vs_demands
 
 st.title("Walls Output")
 
@@ -16,6 +17,8 @@ if st.button("**Run Analysis**"):
             
             run_build_ml_input_file()
             run_load_ml_models()
+            run_capacities_vs_demands()
+            
             # subprocess.run(["python", "./scripts/BuildMLInputFile.py"], check=True)
             # subprocess.run(["python", "./scripts/LoadMLmodels.py"], check=True)
             # subprocess.run(["python", "./scripts/CapacitiesVsDemands.py"], check=True)
