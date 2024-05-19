@@ -28,7 +28,8 @@ if st.button("**Run Analysis**"):
             WallMaterial = pd.read_csv('./Inputs/Input_Walls_Material.csv')
             WallRebars = pd.read_csv('./Inputs/Input_Walls_rebars.csv')
 
-
+            st.success("Start code in here")
+            
             ## Adding the materials for the dataset
 
             WallGeometry['fy (kg/cm2)'] = WallGeometry['L']/WallGeometry['L']*WallMaterial['fy'].values.tolist()[0]
@@ -49,6 +50,7 @@ if st.button("**Run Analysis**"):
             Walls['Altura (cm)'] = Walls['H']*100
             Walls['Ancho (cm)'] = Walls['wc']*100
 
+            st.success("mid code!")
             ## Dropping unnecessary columns
 
             Walls = Walls.drop(['Wall Label','Level','BarQuantity', 'BarType','Rebars','hc',  'wb', 'hb','L','H','t','wc'], axis =1)
