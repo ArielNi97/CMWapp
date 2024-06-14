@@ -29,7 +29,7 @@ if st.button("**Run Analysis**"):
             # subprocess.run(["python", "./scripts/BuildOOPCalculator.py"], check=True)
             # subprocess.run(["python", "./scripts/OOPLimitLines.py"], check=True)
             
-            st.success("Analysis executed successfully!")
+            st.success("Analysis executed successfully using Categorical boosting Machine Learning Model!")
          
          except Exception as e:
             st.error(f"Error: {type(e).__name__} - {str(e)}")

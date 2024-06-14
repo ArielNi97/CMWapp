@@ -3,11 +3,11 @@
 - This app is intended to be used by Structural Engineers, contractors, or architects.
 - It only calculates the Confined Masonry Walls capacities. Other type of similar walls, such as reinforced Masonry Walls, Unreinforced Masonry Walls, or masonry infill walls are out of the scope of this app.
 - The Axial-Bending, Pure bending, Combined axial-bending and Back Bone curve are obtained by a Machine Learning model trained and validated with more than 3 Million walls varying its geometrical and material properties complying with the Nicaragua MP-001 standard and the trilinear Shear-drift curves were calculated based on the research made by borah, Singhal, 2022, “Add the name of the paper”.
-- Several Machine Learning Models were perfomed (Decision Trees, Random Forest,XG boost, Adaptive Boosting, KN-Neighbors, Light gradient boosting, categorical boosting), however the chosen one to predict the capacities, was categorical boosting since it was the more accurate among them all.
+- Several Machine Learning Models were performed (Decision Trees, Random Forest,XG boost, Adaptive Boosting, KN-Neighbors, Light gradient boosting, categorical boosting), however the chosen one to predict the capacities, was categorical boosting since it was the more accurate among them all.
 - Out of plane wall capacities are calculated via python scripts and based in Peruvian code (E070, 2019).
 - The data base was made combining different parameters of walls, such as: Wall Length, Wall Height, Wall thickness, column width, number and type of rebars,  Masonry compressive strength, Concrete compressive strength, Steel yielding strength.
 - The interface of this app is made using streamlit.
-- The deployment was made with render.io.
+- The deployment was made with streamlit cloud.
 - The user inputs are limited to Project Location, Wall Loads, Walls Geometry, Walls Material and Walls Boundary Conditions.
 - The outputs are limited to the information displayed in the Analysis Tab.
 
